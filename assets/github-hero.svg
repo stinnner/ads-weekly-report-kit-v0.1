@@ -36,10 +36,10 @@
   <text x="141" y="458" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">Meta Ads CSV</text>
 
   <rect x="286" y="430" width="138" height="44" rx="22" fill="#0F766E"/>
-  <text x="325" y="458" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">HTML + XLSX</text>
+  <text x="315" y="458" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">HTML + XLSX</text>
 
   <rect x="436" y="430" width="124" height="44" rx="22" fill="#111827" stroke="#334155"/>
-  <text x="475" y="458" fill="#E5E7EB" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">Python CLI</text>
+  <text x="465" y="458" fill="#E5E7EB" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">Python CLI</text>
 
   <text x="108" y="534" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">What it delivers</text>
   <text x="108" y="574" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="21">• KPI summary cards and trend charts</text>
