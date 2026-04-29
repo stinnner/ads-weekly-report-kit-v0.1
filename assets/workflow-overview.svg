@@ -1,0 +1,50 @@
+<svg width="1280" height="420" viewBox="0 0 1280 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="wfbg" x1="140" y1="40" x2="1140" y2="380" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FAFC"/>
+      <stop offset="1" stop-color="#E2E8F0"/>
+    </linearGradient>
+    <linearGradient id="step1" x1="80" y1="110" x2="320" y2="310" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DBEAFE"/>
+      <stop offset="1" stop-color="#BFDBFE"/>
+    </linearGradient>
+    <linearGradient id="step2" x1="420" y1="110" x2="860" y2="310" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ECFEFF"/>
+      <stop offset="1" stop-color="#CCFBF1"/>
+    </linearGradient>
+    <linearGradient id="step3" x1="950" y1="110" x2="1200" y2="310" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DCFCE7"/>
+      <stop offset="1" stop-color="#BBF7D0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="420" rx="28" fill="url(#wfbg)"/>
+  <text x="74" y="76" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700">Workflow overview</text>
+  <text x="74" y="104" fill="#475569" font-family="Segoe UI, Arial, sans-serif" font-size="18">A simple 3-step flow from exported ad data to a presentation-ready delivery package.</text>
+
+  <rect x="74" y="136" width="260" height="214" rx="26" fill="url(#step1)" stroke="#93C5FD"/>
+  <rect x="360" y="136" width="540" height="214" rx="26" fill="url(#step2)" stroke="#5EEAD4"/>
+  <rect x="926" y="136" width="280" height="214" rx="26" fill="url(#step3)" stroke="#86EFAC"/>
+
+  <text x="106" y="188" fill="#1D4ED8" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">STEP 1</text>
+  <text x="106" y="224" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="700">Export CSV</text>
+  <text x="106" y="264" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="20">Meta Ads Manager</text>
+  <text x="106" y="294" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="20">report export</text>
+
+  <text x="394" y="188" fill="#0F766E" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">STEP 2</text>
+  <text x="394" y="224" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="700">Run the CLI</text>
+  <text x="394" y="264" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="20">mapping → normalize → KPI → aggregate</text>
+  <text x="394" y="294" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="20">charts → HTML render → Excel export</text>
+  <rect x="394" y="314" width="472" height="20" rx="10" fill="#99F6E4"/>
+  <rect x="394" y="314" width="354" height="20" rx="10" fill="#14B8A6"/>
+
+  <text x="960" y="188" fill="#15803D" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">STEP 3</text>
+  <text x="960" y="224" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="700">Deliver</text>
+  <text x="960" y="264" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="20">weekly_report.html</text>
+  <text x="960" y="294" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="20">clean.xlsx</text>
+
+  <path d="M334 243H360" stroke="#64748B" stroke-width="8" stroke-linecap="round"/>
+  <path d="M900 243H926" stroke="#64748B" stroke-width="8" stroke-linecap="round"/>
+  <path d="M348 229L366 243L348 257" stroke="#64748B" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M914 229L932 243L914 257" stroke="#64748B" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
