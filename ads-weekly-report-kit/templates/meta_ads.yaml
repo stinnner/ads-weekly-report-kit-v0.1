@@ -1,0 +1,72 @@
+name: meta_ads
+required:
+  - spend
+  - impressions
+  - link_clicks
+fields:
+  date:
+    aliases:
+      - "day"
+      - "date"
+      - "reporting_start"
+      - "reporting_start_date"
+      - "reporting start"
+      - "reporting start date"
+    type: "date"
+  campaign:
+    aliases:
+      - "campaign name"
+      - "campaign"
+      - "campaign_name"
+    type: "str"
+  adset:
+    aliases:
+      - "ad set name"
+      - "adset"
+      - "adset_name"
+      - "ad set"
+    type: "str"
+  ad:
+    aliases:
+      - "ad name"
+      - "ad"
+      - "ad_name"
+    type: "str"
+  spend:
+    aliases:
+      - "amount spent"
+      - "amount spent (usd)"
+      - "amount_spent"
+      - "amount_spent_usd"
+      - "spend"
+      - "cost"
+    type: "money"
+  impressions:
+    aliases:
+      - "impressions"
+    type: "int"
+  link_clicks:
+    aliases:
+      - "link clicks"
+      - "clicks (link)"
+      - "clicks_link"
+      - "link_clicks"
+    type: "int"
+  purchase_value:
+    aliases:
+      - "purchase conversion value"
+      - "website purchases conversion value"
+      - "purchase conversion value (usd)"
+      - "purchase_value"
+    type: "money"
+  purchases:
+    aliases:
+      - "website purchases"
+      - "purchases"
+    type: "int"
+  website_purchase_roas:
+    aliases:
+      - "website purchase roas"
+      - "website_purchase_roas"
+    type: "float"
+
