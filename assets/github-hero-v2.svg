@@ -32,14 +32,14 @@
   <text x="108" y="338" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="23">Clean the export, calculate KPI, render charts,</text>
   <text x="108" y="372" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="23">and deliver HTML + Excel in one CLI tool.</text>
 
-  <rect x="108" y="430" width="166" height="44" rx="22" fill="#2563EB"/>
-  <text x="141" y="458" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">Meta Ads CSV</text>
+  <rect x="108" y="430" width="160" height="44" rx="22" fill="#2563EB"/>
+  <text x="141" y="458" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">Meta Ads CSV</text>
 
-  <rect x="286" y="430" width="154" height="44" rx="22" fill="#0F766E"/>
-  <text x="315" y="458" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">HTML + XLSX</text>
+  <rect x="280" y="430" width="178" height="44" rx="22" fill="#0F766E"/>
+  <text x="312" y="458" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">HTML + XLSX</text>
 
-  <rect x="452" y="430" width="134" height="44" rx="22" fill="#111827" stroke="#334155"/>
-  <text x="475" y="458" fill="#E5E7EB" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">Python CLI</text>
+  <rect x="470" y="430" width="158" height="44" rx="22" fill="#111827" stroke="#334155"/>
+  <text x="494" y="458" fill="#E5E7EB" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">Python CLI</text>
 
   <text x="108" y="534" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">What it delivers</text>
   <text x="108" y="574" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="21">• KPI summary cards and trend charts</text>
