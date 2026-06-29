@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 360" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#070b14"/>
+      <stop offset="30%" stop-color="#0b1220"/>
+    </linearGradient>
+    <linearGradient id="cardBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(17,26,46,0.6)" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="rgba(17,26,46,0.6)" stop-opacity="0.6"/>
+    </linearGradient>
+    <linearGradient id="formulaBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.03)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.03)"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1100" height="360" fill="url(#bg)"/>
+
+  <!-- Section title -->
+  <text x="28" y="38" fill="#e2e8f0" font-size="16" font-weight="600">KPI Definitions (Meta-aligned)</text>
+
+  <!-- Panel background -->
+  <rect x="28" y="52" width="1044" height="290" rx="14" fill="rgba(17,26,46,0.6)" stroke="#1f2a44" stroke-width="1"/>
+
+  <!-- KPI cards grid (2x2) -->
+  <!-- Card 1: CTR -->
+  <rect x="42" y="66" width="504" height="128" rx="10" fill="rgba(255,255,255,0.03)"/>
+  <text x="60" y="92" fill="#e2e8f0" font-size="15" font-style="italic">
+    <tspan font-family="KaTeX_Main, serif" font-style="italic">CTR</tspan>
+    <tspan>=</tspan>
+    <tspan font-size="13">
+      <tspan fill="#e2e8f0" font-family="KaTeX_Main, serif">link_clicks</tspan>
+    </tspan>
+  </text>
+  <line x1="112" y1="100" x2="212" y2="100" stroke="#e2e8f0" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="115" y="110" fill="#e2e8f0" font-size="13">
+    <tspan fill="#e2e8f0" font-family="KaTeX_Main, serif">impressions</tspan>
+  </text>
+  <text x="540" y="98" fill="#e2e8f0" font-size="12" opacity="0.8">
+    <tspan fill="#94a3b8">Link click-through rate. If </tspan>
+    <tspan fill="#94a3b8" font-family="KaTeX_Main, serif" font-style="italic">impressions = 0</tspan>
+    <tspan fill="#94a3b8">, returns 0.</tspan>
+  </text>
+
+  <!-- Card 2: CPC -->
+  <rect x="554" y="66" width="504" height="128" rx="10" fill="rgba(255,255,255,0.03)"/>
+  <text x="572" y="92" fill="#e2e8f0" font-size="15" font-style="italic">
+    <tspan font-family="KaTeX_Main, serif" font-style="italic">CPC</tspan>
+    <tspan>=</tspan>
+    <tspan font-size="13">
+      <tspan fill="#e2e8f0" font-family="KaTeX_Main, serif">spend</tspan>
+    </tspan>
+  </text>
+  <line x1="624" y1="100" x2="724" y2="100" stroke="#e2e8f0" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="627" y="110" fill="#e2e8f0" font-size="13">
+    <tspan fill="#e2e8f0" font-family="KaTeX_Main, serif">link_clicks</tspan>
+  </text>
+  <text x="1052" y="96" fill="#e2e8f0" font-size="12" opacity="0.8" text-anchor="end">
+    <tspan fill="#94a3b8">Cost per link click.</tspan>
+  </text>
+  <text x="1052" y="112" fill="#e2e8f0" font-size="12" opacity="0.8" text-anchor="end">
+    <tspan fill="#94a3b8">If </tspan>
+    <tspan fill="#94a3b8" font-family="KaTeX_Main, serif" font-style="italic">link_clicks = 0</tspan>
+    <tspan fill="#94a3b8">, returns N/A.</tspan>
+  </text>
+
+  <!-- Card 3: CPM -->
+  <rect x="42" y="202" width="504" height="128" rx="10" fill="rgba(255,255,255,0.03)"/>
+  <text x="60" y="228" fill="#e2e8f0" font-size="15" font-style="italic">
+    <tspan font-family="KaTeX_Main, serif" font-style="italic">CPM</tspan>
+    <tspan>=</tspan>
+    <tspan font-size="13">
+      <tspan fill="#e2e8f0" font-family="KaTeX_Main, serif">spend</tspan>
+    </tspan>
+  </text>
+  <line x1="112" y1="236" x2="192" y2="236" stroke="#e2e8f0" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="115" y="246" fill="#e2e8f0" font-size="13">
+    <tspan fill="#e2e8f0" font-family="KaTeX_Main, serif">impressions</tspan>
+  </text>
+  <text x="205" y="238" fill="#e2e8f0" font-size="15">× 1000</text>
+  <text x="540" y="235" fill="#e2e8f0" font-size="12" opacity="0.8">
+    <tspan fill="#94a3b8">Cost per 1,000 impressions.</tspan>
+  </text>
+  <text x="540" y="251" fill="#e2e8f0" font-size="12" opacity="0.8">
+    <tspan fill="#94a3b8">If </tspan>
+    <tspan fill="#94a3b8" font-family="KaTeX_Main, serif" font-style="italic">impressions = 0</tspan>
+    <tspan fill="#94a3b8">, returns N/A.</tspan>
+  </text>
+
+  <!-- Card 4: ROAS (larger note) -->
+  <rect x="554" y="202" width="504" height="128" rx="10" fill="rgba(255,255,255,0.03)"/>
+  <text x="572" y="228" fill="#e2e8f0" font-size="15" font-style="italic">
+    <tspan font-family="KaTeX_Main, serif" font-style="italic">ROAS</tspan>
+    <tspan>=</tspan>
+  </text>
+  <text x="635" y="222" fill="#e2e8f0" font-size="13" font-family="monospace">
+    <tspan>Meta weighted,</tspan>
+  </text>
+  <text x="635" y="239" fill="#e2e8f0" font-size="13" font-family="monospace">
+    <tspan>if website_purchase_roas available</tspan>
+  </text>
+  <text x="572" y="260" fill="#e2e8f0" font-size="13" font-family="monospace">
+    <tspan>purchase_value / spend,</tspan>
+  </text>
+  <text x="572" y="278" fill="#e2e8f0" font-size="13" font-family="monospace">
+    <tspan>otherwise (derived)</tspan>
+  </text>
+  <text x="1052" y="325" fill="#e2e8f0" font-size="12" opacity="0.8" text-anchor="end">
+    <tspan fill="#94a3b8">Prioritizes Meta's own ROAS metric from export;</tspan>
+  </text>
+  <text x="1052" y="341" fill="#e2e8f0" font-size="12" opacity="0.8" text-anchor="end">
+    <tspan fill="#94a3b8">falls back to derived purchase_value / spend.</tspan>
+  </text>
+
+  <!-- Section accent pill -->
+  <rect x="870" y="22" width="110" height="22" rx="11" fill="none" stroke="#60a5fa" stroke-opacity="0.35" stroke-width="1"/>
+  <text x="925" y="36" fill="#60a5fa" font-size="11" text-anchor="middle">KaTeX rendered</text>
+</svg>
