@@ -54,13 +54,13 @@ _HTML_TEMPLATE = Template(
     @media (max-width: 900px) { .grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
     .kpi-defs { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:14px; }
     .kpi-def { background:rgba(255,255,255,.03); border-radius:10px; padding:14px 16px; }
-    .kpi-def .formula { margin-bottom:6px; }
+    .kpi-def .formula { margin-bottom:6px; overflow:hidden; }
     .kpi-def .note { color:var(--muted); font-size:12px; }
     .katex { color:var(--text); }
     .katex .mord, .katex .mbin, .katex .mrel, .katex .mopen, .katex .mclose, .katex .mpunct, .katex .minner, .katex .mord.text { color:var(--text); }
     .katex .mfrac .frac-line { border-bottom-color:rgba(255,255,255,.2); }
     .katex .text { color:var(--muted); }
-    .kpi-def .formula { overflow-x:auto; }
+    .kpi-def .formula { overflow:hidden; }
     @media (max-width: 700px) { .kpi-defs { grid-template-columns:1fr; } }
   </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
