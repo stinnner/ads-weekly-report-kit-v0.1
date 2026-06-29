@@ -51,7 +51,15 @@ _HTML_TEMPLATE = Template(
     .pill { display:inline-block; padding:3px 8px; border:1px solid rgba(96,165,250,.35); color:var(--accent); border-radius:999px; font-size:12px; }
     ul { margin: 8px 0 0 18px; }
     code { background:rgba(255,255,255,.06); padding:2px 6px; border-radius:8px; }
+    .kpi-defs { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:12px; }
+    .kpi-def { background:rgba(255,255,255,.035); border:1px solid rgba(255,255,255,.08); border-radius:12px; padding:13px 14px; }
+    .kpi-def-title { font-weight:700; margin-bottom:8px; }
+    .kpi-formula { color:var(--text); line-height:1.7; overflow-wrap:anywhere; }
+    .kpi-note { color:var(--muted); font-size:12px; margin-top:8px; line-height:1.5; }
+    .formula-row { display:flex; gap:8px; align-items:baseline; flex-wrap:wrap; }
+    .formula-label { min-width:76px; color:var(--muted); font-size:12px; }
     @media (max-width: 900px) { .grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+    @media (max-width: 700px) { .kpi-defs { grid-template-columns:1fr; } }
   </style>
 </head>
 <body>
@@ -144,16 +152,35 @@ _HTML_TEMPLATE = Template(
     <div class="section">
       <h2>KPI Definitions (Meta-aligned)</h2>
       <div class="panel">
-        <ul>
-          <li><b>CTR (link click-through rate)</b> = <code>link_clicks / impressions</code> (if impressions=0 → 0)</li>
-          <li><b>CPC (cost per link click)</b> = <code>spend / link_clicks</code> (if link_clicks=0 → NaN)</li>
-          <li><b>CPM (cost per 1,000 impressions)</b> = <code>spend / impressions * 1000</code> (if impressions=0 → NaN)</li>
-          <li><b>ROAS</b>: if <code>website_purchase_roas</code> is missing, the report shows <i>Observed ROAS (derived)</i> = <code>purchase_value / spend</code>.</li>
-        </ul>
+        <div class="kpi-defs">
+          <div class="kpi-def">
+            <div class="kpi-def-title">CTR</div>
+            <div class="kpi-formula"><code>link_clicks / impressions</code></div>
+            <div class="kpi-note">Link click-through rate. If impressions is 0, the report returns 0.</div>
+          </div>
+          <div class="kpi-def">
+            <div class="kpi-def-title">CPC</div>
+            <div class="kpi-formula"><code>spend / link_clicks</code></div>
+            <div class="kpi-note">Cost per link click. If link_clicks is 0, the report shows N/A.</div>
+          </div>
+          <div class="kpi-def">
+            <div class="kpi-def-title">CPM</div>
+            <div class="kpi-formula"><code>spend / impressions * 1000</code></div>
+            <div class="kpi-note">Cost per 1,000 impressions. If impressions is 0, the report shows N/A.</div>
+          </div>
+          <div class="kpi-def">
+            <div class="kpi-def-title">ROAS</div>
+            <div class="kpi-formula">
+              <div class="formula-row"><span class="formula-label">Preferred</span><code>website_purchase_roas</code></div>
+              <div class="formula-row"><span class="formula-label">Fallback</span><code>purchase_value / spend</code></div>
+            </div>
+            <div class="kpi-note">The report prioritizes Meta's own ROAS metric when present, then falls back to derived purchase value divided by spend.</div>
+          </div>
+        </div>
         {% if ctx.notes %}
-          <div style="margin-top:10px" class="muted">
+          <div style="margin-top:14px" class="muted">
             {% for n in ctx.notes %}
-              <div>• {{ n }}</div>
+              <div>&bull; {{ n }}</div>
             {% endfor %}
           </div>
         {% endif %}
