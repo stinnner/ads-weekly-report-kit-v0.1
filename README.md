@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/github-hero.svg" alt="Ads Weekly Report Kit preview" width="100%">
+  <img src="assets/github-hero-v2.svg" alt="Ads Weekly Report Kit preview" width="100%">
 </p>
 
 <h1 align="center">Ads 周报工具包 v0.1</h1>
@@ -53,13 +53,13 @@
 ### 1. GitHub 展示预览
 
 <p align="center">
-  <img src="assets/github-hero.svg" alt="GitHub project preview" width="100%">
+  <img src="assets/github-hero-v2.svg" alt="GitHub project preview" width="100%">
 </p>
 
 ### 2. 处理流程预览
 
 <p align="center">
-  <img src="assets/workflow-overview.svg" alt="Workflow overview" width="100%">
+  <img src="assets/workflow-overview-v2.svg" alt="Workflow overview" width="100%">
 </p>
 
 ### 3. 实际产物
@@ -112,8 +112,8 @@ adswk report --input examples/meta_sample.csv --output outputs/ --template meta_
 |-- README.md
 |-- .gitignore
 |-- assets/
-|   |-- github-hero.svg
-|   `-- workflow-overview.svg
+|   |-- github-hero-v2.svg
+|   `-- workflow-overview-v2.svg
 |-- ads-weekly-report-kit_v0.1.zip
 `-- ads-weekly-report-kit/
     |-- README.md
