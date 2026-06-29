@@ -52,7 +52,20 @@ _HTML_TEMPLATE = Template(
     ul { margin: 8px 0 0 18px; }
     code { background:rgba(255,255,255,.06); padding:2px 6px; border-radius:8px; }
     @media (max-width: 900px) { .grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+    .kpi-defs { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:14px; }
+    .kpi-def { background:rgba(255,255,255,.03); border-radius:10px; padding:14px 16px; }
+    .kpi-def .formula { margin-bottom:6px; }
+    .kpi-def .note { color:var(--muted); font-size:12px; }
+    .katex { color:var(--text); }
+    .katex .mord, .katex .mbin, .katex .mrel, .katex .mopen, .katex .mclose, .katex .mpunct, .katex .minner, .katex .mord.text { color:var(--text); }
+    .katex .mfrac .frac-line { border-bottom-color:rgba(255,255,255,.2); }
+    .katex .text { color:var(--muted); }
+    .katex-html { overflow-x:auto; }
+    @media (max-width: 700px) { .kpi-defs { grid-template-columns:1fr; } }
   </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],throwOnError:false})"></script>
 </head>
 <body>
   <div class="wrap">
@@ -144,16 +157,28 @@ _HTML_TEMPLATE = Template(
     <div class="section">
       <h2>KPI Definitions (Meta-aligned)</h2>
       <div class="panel">
-        <ul>
-          <li><b>CTR (link click-through rate)</b> = <code>link_clicks / impressions</code> (if impressions=0 → 0)</li>
-          <li><b>CPC (cost per link click)</b> = <code>spend / link_clicks</code> (if link_clicks=0 → NaN)</li>
-          <li><b>CPM (cost per 1,000 impressions)</b> = <code>spend / impressions * 1000</code> (if impressions=0 → NaN)</li>
-          <li><b>ROAS</b>: if <code>website_purchase_roas</code> is missing, the report shows <i>Observed ROAS (derived)</i> = <code>purchase_value / spend</code>.</li>
-        </ul>
+        <div class="kpi-defs">
+          <div class="kpi-def">
+            <div class="formula">$$\mathrm{CTR} = \frac{\mathrm{link\_clicks}}{\mathrm{impressions}}$$</div>
+            <div class="note">Link click-through rate. If $\mathrm{impressions}=0$, returns $0$.</div>
+          </div>
+          <div class="kpi-def">
+            <div class="formula">$$\mathrm{CPC} = \frac{\mathrm{spend}}{\mathrm{link\_clicks}}$$</div>
+            <div class="note">Cost per link click. If $\mathrm{link\_clicks}=0$, returns N/A.</div>
+          </div>
+          <div class="kpi-def">
+            <div class="formula">$$\mathrm{CPM} = \frac{\mathrm{spend}}{\mathrm{impressions}} \times 1000$$</div>
+            <div class="note">Cost per 1,000 impressions. If $\mathrm{impressions}=0$, returns N/A.</div>
+          </div>
+          <div class="kpi-def">
+            <div class="formula">$$\mathrm{ROAS} = \begin{cases} \text{Meta weighted}, & \mathrm{website\_purchase\_roas} \text{ available} \\[8pt] \dfrac{\mathrm{purchase\_value}}{\mathrm{spend}}, & \text{otherwise (derived)} \end{cases}$$</div>
+            <div class="note">Prioritizes Meta's own ROAS metric from export; falls back to derived $\mathrm{purchase\_value}/\mathrm{spend}$.</div>
+          </div>
+        </div>
         {% if ctx.notes %}
-          <div style="margin-top:10px" class="muted">
+          <div style="margin-top:14px" class="muted">
             {% for n in ctx.notes %}
-              <div>• {{ n }}</div>
+              <div>&bull; {{ n }}</div>
             {% endfor %}
           </div>
         {% endif %}
